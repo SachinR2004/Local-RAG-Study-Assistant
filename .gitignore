@@ -1,7 +1,51 @@
+# Python environments
 venv/
 .venv/
 __pycache__/
 *.pyc
+
+# Local files and secrets
+.env
+.env.*
+!.env.example
+*.pdf
+
+# Local vector database and document registry
+data/
+
+# Docker / OS
 .DS_Store
-*.faiss
-*.pkl
+
+# IDE
+.vscode/
+.idea/
+
+# Testing and logs
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.log
+.ipynb_checkpoints/
+# Local documents and vector database
+data/
+*.pdf
+
+# Environment and secrets
+.env.*
+!.env.example
+
+# Python artifacts
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# IDE and macOS files
+.vscode/
+.idea/
+.DS_Store
+
+# Backup files
+rag_utils_before_reranking.py

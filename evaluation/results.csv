@@ -1,0 +1,7 @@
+id,question,activity_precision,activity_recall,mrr,page_coverage,retrieved_chunks,expected_activities,retrieved_activities,retrieved_pages
+RAG001,What is S/MIME?,1.0,1.0,1.0,1.0,3,activity 3,"activity 3, activity 3, activity 3","6, 7"
+RAG002,Explain the sender and receiver workflow in Activity 3.,1.0,1.0,1.0,1.0,3,activity 3,"activity 3, activity 3, activity 3","6, 7"
+RAG003,Compare Activity 2 and Activity 4.,1.0,1.0,1.0,,3,"activity 2, activity 4","activity 4, activity 4, activity 2","3, 10"
+RAG004,Explain the purpose of X.509 certificates.,0.6666666666666666,1.0,1.0,,3,activity 4,"activity 4, activity 4, activity 1","1, 8"
+RAG005,Explain the sender-side process in Activity 2.,1.0,1.0,1.0,,3,activity 2,"activity 2, activity 2, activity 2","3, 5"
+RAG006,How does the receiver verify a digital signature in Activity 3?,1.0,1.0,1.0,1.0,3,activity 3,"activity 3, activity 3, activity 3","6, 7"

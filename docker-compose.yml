@@ -1,0 +1,49 @@
+services:
+  backend:
+    build: .
+    image: rag-study-assistant:latest
+    container_name: rag-backend
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
+
+    env_file:
+      - .env
+
+    environment:
+      HF_HOME: /models
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./data:/app/data
+      - ${HOME}/.cache/huggingface:/models
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=5)"
+      interval: 20s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+    restart: unless-stopped
+
+  frontend:
+    image: rag-study-assistant:latest
+    container_name: rag-frontend
+    command: streamlit run app.py --server.address=0.0.0.0 --server.port=8501
+
+    environment:
+      API_BASE_URL: http://backend:8000
+
+    ports:
+      - "8501:8501"
+
+    depends_on:
+      backend:
+        condition: service_healthy
+
+    restart: unless-stopped

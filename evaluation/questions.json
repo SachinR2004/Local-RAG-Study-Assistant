@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": "RAG001",
+    "question": "What is S/MIME?",
+    "expected_activities": ["Activity 3"],
+    "expected_pages": [6]
+  },
+  {
+    "id": "RAG002",
+    "question": "Explain the sender and receiver workflow in Activity 3.",
+    "expected_activities": ["Activity 3"],
+    "expected_pages": [6, 7]
+  },
+  {
+    "id": "RAG003",
+    "question": "Compare Activity 2 and Activity 4.",
+    "expected_activities": ["Activity 2", "Activity 4"],
+    "expected_pages": []
+  },
+  {
+    "id": "RAG004",
+    "question": "Explain the purpose of X.509 certificates.",
+    "expected_activities": ["Activity 4"],
+    "expected_pages": []
+  },
+  {
+    "id": "RAG005",
+    "question": "Explain the sender-side process in Activity 2.",
+    "expected_activities": ["Activity 2"],
+    "expected_pages": []
+  },
+  {
+    "id": "RAG006",
+    "question": "How does the receiver verify a digital signature in Activity 3?",
+    "expected_activities": ["Activity 3"],
+    "expected_pages": [7]
+  }
+]
